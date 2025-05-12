@@ -1,0 +1,572 @@
+
+20 useful HTML scripts
+
+1. Basic HTML Boilerplate
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Website</title>
+</head>
+<body>
+  <h1>Hello, World!</h1>
+</body>
+</html>
+
+Usage: Foundation for every HTML page.
+
+2. Meta Tag for Mobile Responsiveness
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Usage: Makes your site responsive on smartphones and tablets.
+
+3. Link External CSS
+
+<link rel="stylesheet" href="styles.css">
+Usage: Connect your webpage to an external stylesheet.
+
+4. Link JavaScript File
+
+<script src="script.js"></script>
+
+Usage: Link an external JS file for interactivity.
+
+5. Button with Click Event
+
+<button onclick="alert('Hello from Rani!')">Click Me</button>
+
+Usage: Adds a clickable button that shows a message.
+
+6. Email Link
+
+<a href="mailto:someone@example.com">Send Email</a>
+
+Usage: Opens email app with recipient filled in.
+
+7. Phone Call Link
+
+<a href="tel:+911234567890">Call Us</a>
+
+Usage: Tap to call on mobile devices.
+
+8. Image with Alt Text
+
+<img src="rani.png" alt="My Digital Companion Rani">
+
+Usage: Displays an image with a fallback description.
+
+9. Input Form
+
+<form action="submit.php" method="post">
+  <input type="text" name="name" placeholder="Enter your name">
+  <input type="submit" value="Submit">
+</form>
+
+Usage: Collects data from users.
+
+10. Video Embed
+
+<video width="320" height="240" controls>
+  <source src="video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+Usage: Plays a video on your page.
+
+11. Audio Embed
+
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+Usage: Plays sound/music directly on the page.
+
+12. Internal Anchor Link
+
+<a href="#contact">Go to Contact Section</a>
+...
+<h2 id="contact">Contact Us</h2>
+
+Usage: Smooth scroll to sections on the same page.
+
+13. Table with Border
+
+<table border="1">
+  <tr>
+    <th>Name</th><th>Age</th>
+  </tr>
+  <tr>
+    <td>Ani</td><td>25</td>
+  </tr>
+</table>
+
+Usage: Display tabular data clearly.
+
+14. Drop-down Menu
+
+<select>
+  <option value="html">HTML</option>
+  <option value="css">CSS</option>
+</select>
+
+Usage: User can select one value from options.
+
+15. Checkbox Group
+
+<label><input type="checkbox" name="lang" value="html"> HTML</label>
+<label><input type="checkbox" name="lang" value="css"> CSS</label>
+
+Usage: User can select multiple options.
+
+16. Radio Buttons
+
+<label><input type="radio" name="gender" value="male"> Male</label>
+<label><input type="radio" name="gender" value="female"> Female</label>
+
+Usage: User can select only one option.
+
+17. Progress Bar
+
+<progress value="70" max="100"></progress>
+
+Usage: Shows task progress like uploads or loading.
+
+18. Tooltip (Title Attribute)
+
+<p title="This is a tooltip!">Hover over me</p>
+
+Usage: Shows helper text on hover.
+
+19. Favicon
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+Usage: Adds a small icon to your browser tab.
+
+20. Google Fonts Integration
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Roboto', sans-serif; }
+</style>
+
+Usage: Use beautiful fonts in your website.
+
+==================================================================
+
+Top 20 Most Useful JavaScript Scripts for Websites
+
+1. Show Alert Message
+
+alert("Welcome to my website!");
+
+Usage: Displays a popup when someone lands on your page.
+
+2. Confirm Box
+
+if (confirm("Do you want to continue?")) {
+  alert("Great!");
+}
+
+Usage: Asks for user confirmation.
+
+3. Prompt for User Input
+
+let name = prompt("What is your name?");
+alert("Hello, " + name + "!");
+
+Usage: Gets user input interactively.
+
+4. Change Text on Button Click
+
+<p id="greeting">Hello</p>
+<button onclick="document.getElementById('greeting').innerText = 'Hi from Rani!'">Click Me</button>
+
+Usage: Changes text dynamically when button is clicked.
+
+5. Hide and Show Elements
+
+<p id="text">This is secret info.</p>
+<button onclick="document.getElementById('text').style.display='none'">Hide</button>
+<button onclick="document.getElementById('text').style.display='block'">Show</button>
+
+Usage: Useful for toggling content.
+
+6. Form Validation
+t
+function validateForm() {
+  let x = document.forms["myForm"]["name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+
+Usage: Prevents submitting empty forms.
+
+7. Digital Clock
+
+setInterval(function() {
+  let now = new Date();
+  document.getElementById("clock").innerText = now.toLocaleTimeString();
+}, 1000);
+
+Usage: Displays real-time clock.
+
+8. Countdown Timer
+
+let seconds = 10;
+let timer = setInterval(function() {
+  if (seconds > 0) {
+    document.getElementById("countdown").innerText = seconds + "s";
+    seconds--;
+  } else {
+    clearInterval(timer);
+    document.getElementById("countdown").innerText = "Time's up!";
+  }
+}, 1000);
+
+Usage: Great for quizzes or deals.
+
+9. Toggle Dark Mode
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
+
+Usage: Adds dark/light theme switcher.
+
+10. Smooth Scroll to Top
+
+window.scrollTo({ top: 0, behavior: 'smooth' });
+
+Usage: Scrolls back to top with animation.
+
+11. Image Slider
+
+let index = 0;
+function showSlide() {
+  let slides = document.getElementsByClassName("slide");
+  for (let slide of slides) slide.style.display = "none";
+  index = (index + 1) % slides.length;
+  slides[index].style.display = "block";
+  setTimeout(showSlide, 2000);
+}
+showSlide();
+
+Usage: Basic image slideshow.
+
+12. Copy to Clipboard
+
+function copyText(id) {
+  let text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+  alert("Copied to clipboard!");
+}
+
+Usage: Lets users copy any text easily.
+
+13. Get Current Date
+
+let today = new Date().toDateString();
+document.getElementById("date").innerText = today;
+
+Usage: Show today's date.
+
+14. Change Background Color
+
+document.body.style.backgroundColor = "#f0f8ff";
+
+Usage: Dynamically change page colors.
+
+15. Detect User's Device
+
+let isMobile = /iPhone|Android/i.test(navigator.userAgent);
+if (isMobile) alert("You are using a mobile device!");
+
+Usage: Detect if user is on mobile.
+
+16. Keyboard Key Press Detector
+
+document.addEventListener("keydown", function(e) {
+  console.log("Key pressed: " + e.key);
+});
+
+Usage: Used in games, forms, shortcuts.
+
+17. Countdown to a Specific Date
+
+let target = new Date("2025-12-31").getTime();
+setInterval(function() {
+  let now = new Date().getTime();
+  let left = target - now;
+  let days = Math.floor(left / (1000 * 60 * 60 * 24));
+  document.getElementById("newyear").innerText = days + " days to New Year!";
+}, 1000);
+
+Usage: Useful for events and launches.
+
+18. Scroll Reveal Animation
+
+window.addEventListener('scroll', function() {
+  let elems = document.querySelectorAll('.reveal');
+  for (let el of elems) {
+    if (el.getBoundingClientRect().top < window.innerHeight) {
+      el.classList.add('active');
+    }
+  }
+});
+
+Usage: Elements fade in as you scroll.
+
+19. Prevent Right-Click
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+Usage: Block right-click (discourages copying).
+
+20. Simple Math Calculator
+
+function calculate() {
+  let a = Number(document.getElementById("num1").value);
+  let b = Number(document.getElementById("num2").value);
+  document.getElementById("result").innerText = a + b;
+}
+
+Usage: Small calculator for websites.
+
+======================================================================
+
+Top 20 Most Useful CSS Snippets for Websites
+1. Center Anything
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+Usage: Perfectly centers elements both vertically and horizontally.
+
+2. Smooth Hover Effect
+
+button {
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+Usage: Adds smooth color transition on hover.
+
+3. Responsive Image
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+Usage: Makes images scale nicely on all devices.
+
+4. Shadow Effect for Boxes
+
+.box {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+Usage: Gives a neat shadow to make elements stand out.
+
+5. Gradient Background
+
+body {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+Usage: Adds an eye-catching colorful background.
+
+6. Fixed Navigation Bar
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  color: white;
+}
+
+Usage: Keeps navbar on top even when scrolling.
+
+7. Circular Profile Image
+
+.profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+Usage: Makes a square image perfectly round.
+
+8. Stylish Button
+
+.button {
+  background-color: #28a745;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+Usage: Beautiful button for forms and actions.
+
+9. Responsive Grid
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+Usage: Auto-responsive layout for cards, images, etc.
+
+10. Text Shadow for Heading
+
+h1 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+Usage: Makes titles pop with a soft glow.
+
+11. Sticky Footer
+t
+html, body {
+  height: 100%;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+Usage: Keeps footer always at the bottom.
+
+12. CSS Tooltip
+
+.tooltip {
+  position: relative;
+}
+.tooltip:hover::after {
+  content: "This is a tooltip!";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  background: #333;
+  color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+Usage: Displays a custom tooltip on hover.
+
+13. Fade-in Animation
+
+.fade-in {
+  opacity: 0;
+  animation: fade 1s forwards;
+}
+@keyframes fade {
+  to { opacity: 1; }
+}
+
+Usage: Element fades in smoothly on load.
+
+14. Highlight Text Selection
+
+::selection {
+  background: #ffb347;
+  color: black;
+}
+
+Usage: Custom color when users select text.
+
+15. Hover Zoom Image
+
+img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+Usage: Gently zooms in images on hover.
+
+16. Scrollbar Styling (Chrome)
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+Usage: Gives a stylish look to scrollbars.
+
+17. Mobile-Friendly Font Scaling
+
+html {
+  font-size: 100%;
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+Usage: Makes text adjust for mobile screens.
+
+18. Glassmorphism Effect
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+Usage: Adds modern, frosty glass effect.
+
+19. CSS Spinner Loader
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+Usage: Simple loading spinner.
+
+20. Animate on Scroll (with JS trigger)
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+Usage: Animates content as it enters the viewport.
+
+
+

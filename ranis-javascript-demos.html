@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rani's JavaScript Demos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f6fa;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    h2 {
+      color: #1abc9c;
+    }
+    button {
+      padding: 8px 12px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background: #ddd;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rani's 20 JavaScript Demos for Beginners</h1>
+  
+    <h2>1. Greet User</h2>
+    <p>Asks your name and greets you</p>
+    <br><button onclick="greetUser()">Try it</button><hr>
+
+    <h2>2. Add Two Numbers</h2>
+    <p>Adds 5 + 7 and shows result</p>
+    <br><button onclick="addNumbers()">Try it</button><hr>
+
+    <h2>3. Show Date</h2>
+    <p>Displays today’s date</p>
+    <br><button onclick="showDate()">Try it</button><hr>
+
+    <h2>4. Change Text</h2>
+    <p>Changes text content on click</p>
+    <p id="text1">Click the button to change me!</p><br><button onclick="changeText()">Try it</button><hr>
+
+    <h2>5. Random Number</h2>
+    <p>Generates a random number</p>
+    <br><button onclick="randomNumber()">Try it</button><hr>
+
+    <h2>6. Background Color</h2>
+    <p>Changes background color</p>
+    <br><button onclick="changeBg()">Try it</button><hr>
+
+    <h2>7. Count Clicks</h2>
+    <p>Counts how many times you click</p>
+    <p id="clickCount">Clicked: 0 times</p><br><button onclick="count()">Try it</button><hr>
+
+    <h2>8. Show Time</h2>
+    <p>Shows current time</p>
+    <br><button onclick="showTime()">Try it</button><hr>
+
+    <h2>9. Toggle Message</h2>
+    <p>Toggles a hidden message</p>
+    <p id="msg" style="display:none;">This is a hidden message!</p><br><button onclick="toggleMsg()">Try it</button><hr>
+
+    <h2>10. Double Number</h2>
+    <p>Doubles a number input</p>
+    <br><button onclick="doubleNumber()">Try it</button><hr>
+
+    <h2>11. Change Image</h2>
+    <p>Changes an image source</p>
+    <img id="image1" src="https://via.placeholder.com/100x100?text=Old"><br><button onclick="changeImage()">Try it</button><hr>
+
+    <h2>12. Say Goodbye</h2>
+    <p>Shows goodbye alert</p>
+    <br><button onclick="sayBye()">Try it</button><hr>
+
+    <h2>13. Check Age</h2>
+    <p>Checks if you’re an adult</p>
+    <br><button onclick="checkAge()">Try it</button><hr>
+
+    <h2>14. Sum Inputs</h2>
+    <p>Sums two number inputs</p>
+    <input id="a" type="number"> + <input id="b" type="number"><br><button onclick="sumInputs()">Try it</button><hr>
+
+    <h2>15. Change Font</h2>
+    <p>Changes font style</p>
+    <br><button onclick="changeFont()">Try it</button><hr>
+
+    <h2>16. Alert Length</h2>
+    <p>Shows length of input</p>
+    <input id="input1" type="text"><br><button onclick="inputLength()">Try it</button><hr>
+
+    <h2>17. Multiply Numbers</h2>
+    <p>Multiplies 2×8</p>
+    <br><button onclick="multiply()">Try it</button><hr>
+
+    <h2>18. To Uppercase</h2>
+    <p>Makes input uppercase</p>
+    <input id="input2" type="text"><br><button onclick="toUpper()">Try it</button><hr>
+
+    <h2>19. Square a Number</h2>
+    <p>Squares a number</p>
+    <br><button onclick="squareNum()">Try it</button><hr>
+
+    <h2>20. Toggle Background</h2>
+    <p>Toggles light/dark background</p>
+    <br><button onclick="toggleBackground()">Try it</button><hr>
+
+  <script>
+  function greetUser() {
+  let name = prompt('What is your name?');
+  alert('Hello, ' + name + '!');
+}
+
+function addNumbers() {
+  let a = 5, b = 7;
+  alert('Sum is: ' + (a + b));
+}
+
+function showDate() {
+  let today = new Date();
+  alert("Today's date is: " + today.toDateString());
+}
+
+function changeText() {
+  document.getElementById('text1').innerText = 'You changed me!';
+}
+
+function randomNumber() {
+  let num = Math.floor(Math.random() * 100);
+  alert('Random number: ' + num);
+}
+
+function changeBg() {
+  document.body.style.backgroundColor = 'lightyellow';
+}
+
+let count = 0;
+function countClicks() {
+  count++;
+  document.getElementById('clickCount').innerText = 'Clicked: ' + count + ' times';
+}
+
+function showTime() {
+  let now = new Date();
+  alert('Current time: ' + now.toLocaleTimeString());
+}
+
+function toggleMsg() {
+  let el = document.getElementById('msg');
+  el.style.display = (el.style.display === 'none') ? 'block' : 'none';
+}
+
+function doubleNumber() {
+  let num = prompt('Enter a number:');
+  alert('Double: ' + (num * 2));
+}
+
+function changeImage() {
+  document.getElementById('image1').src = 'https://via.placeholder.com/100x100?text=New';
+}
+
+function sayBye() {
+  alert('Goodbye!');
+}
+
+function checkAge() {
+  let age = prompt('Enter your age:');
+  alert(age >= 18 ? 'You are an adult.' : 'You are underage.');
+}
+
+function sumInputs() {
+  let x = parseInt(document.getElementById('a').value);
+  let y = parseInt(document.getElementById('b').value);
+  alert('Sum: ' + (x + y));
+}
+
+function changeFont() {
+  document.body.style.fontFamily = 'Courier New';
+}
+
+function inputLength() {
+  let val = document.getElementById('input1').value;
+  alert('Length: ' + val.length);
+}
+
+function multiply() {
+  alert('2 × 8 = ' + (2 * 8));
+}
+
+function toUpper() {
+  let val = document.getElementById('input2').value;
+  alert(val.toUpperCase());
+}
+
+function squareNum() {
+  let num = prompt('Enter a number:');
+  alert('Square: ' + (num * num));
+}
+
+function toggleBackground() {
+  let body = document.body;
+  body.style.backgroundColor = (body.style.backgroundColor === 'black') ? 'white' : 'black';
+  body.style.color = (body.style.color === 'white') ? 'black' : 'white';
+}
+  </script>
+</body>
+</html>
